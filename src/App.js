@@ -21,6 +21,8 @@ const Topics = loadable(() => import("./Topics"), {
 
 function App() {
   useEffect(() => {
+    console.log(Object.entries)
+    console.log(Object.values({a: 1}))
     message.success('my love');
   });
   return (
