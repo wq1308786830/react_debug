@@ -2,21 +2,21 @@ import React, {useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Button, message} from "antd";
-import {Link, BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import loadable from "@loadable/component";
 
 const Loading = () => <div>...</div>;
 
 const Home = loadable(() => import("./Home"), {
-  fallback: <Loading />
+  fallback: <Loading/>
 });
 
 const About = loadable(() => import("./About"), {
-  fallback: <Loading />
+  fallback: <Loading/>
 });
 
 const Topics = loadable(() => import("./Topics"), {
-  fallback: <Loading />
+  fallback: <Loading/>
 });
 
 function App() {
@@ -57,13 +57,13 @@ function App() {
 
           <Switch>
             <Route path="/about">
-              <About />
+              <About/>
             </Route>
             <Route path="/topics">
-              <Topics />
+              <Topics/>
             </Route>
             <Route path="/">
-              <Home />
+              <Home/>
             </Route>
           </Switch>
         </div>
